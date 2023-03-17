@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="overflow-hidden">
+        <div class="z-10 relative container mx-auto px-4 lg:px-0 bg-white h-[947px] overflow-hidden" id="home">
+            <div class="-z-10 absolute h-[947px] top-0 left-0 bg-[#A6BCFA]" id="bg-blue"> 
+            </div>
+            <div id="navbar-fix" class="z-[9999] duration-500">
+                <nav class="flex relative justify-between items-center lg:px-[22px] duration-300 bg-transparent" id="navbar">
+                    <!-- <h1 class="text-2xl font-semibold text-white">F<span class="text-2xl font-semibold text-yellow-600">A</span>R</h1> -->
+                    <img src="./src/assets/porto.svg" alt="Logo" class="logo">
+                    <ul class="lg:flex gap-6 navigasi hidden">
+                        <li style="--i:1;"><a href="#home" class="font-normal text-base leading-[19px] text-[#393939]">Home</a></li>
+                        <li style="--i:2;"><a href="#" class="font-normal text-base leading-[19px] text-[#393939]">Projects</a></li>
+                        <li style="--i:3;"><a href="#" class="font-normal text-base leading-[19px] text-[#393939]">About</a></li>
+                        <li style="--i:4;"><a href="#" class="font-normal text-base leading-[19px] text-[#393939]">content</a></li>
+                    </ul>
+                    <div class="lg:hidden flex items-center">
+                        <button id="hamburger" name="hamburger" type="button" class="block absolute right-0 px-4 "> 
+                            <span class="w-[30px] h-[2px] my-2 bg-slate-900 origin-top-left block transition duration-300 ease-in-out"></span>
+                            <span class="w-[30px] h-[2px] my-2 bg-slate-900 block transition duration-300 ease-in-out"></span>
+                            <span class="w-[30px] h-[2px] my-2 bg-slate-900 origin-bottom-left block transition duration-300 ease-in-out"></span>
+                        </button>
+                        <nav class="absolute py-5 bg-white shadow-xl top-full translate-x-[100%] hidden right-5 max-w-[250px] w-full px-4 rounded-md z-[9999]" id="navbar-mobile">
+                            <ul>
+                                <li><a href="#home" class="text-base text-slate-900 py-2 flex hover:text-cyan-600">Home</a></li>
+                                <li><a href="#home" class="text-base text-slate-900 py-2 flex hover:text-cyan-600">Projects</a></li>
+                                <li><a href="#home" class="text-base text-slate-900 py-2 flex hover:text-cyan-600">About</a></li>
+                                <li><a href="#home" class="text-base text-slate-900 py-2 flex hover:text-cyan-600">Service</a></li>
+                                <li><a href="#home" class="text-base text-slate-900 py-2 flex hover:text-cyan-600">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+            <div class="flex justify-center lg:top-[13%] lg:left-[523px] absolute">
+                <img src="./src/assets/plus.svg" alt="">
+            </div>
+            <div class="flex justify-end top-[70%] lg:top-[55%] left-[70%] absolute">
+                <img src="./src/assets/bulat.svg" alt="">
+            </div>
+            <div class="absolute top-[45%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-cyan-900/5 w-[330px] h-[600px] lg:w-[1058px] lg:h-[507px] lg:mx-auto lg:rounded-tl-[200px] rounded-tl-[112px] rounded-br-[112px] lg:rounded-br-[200px] border backdrop-blur-[10px] border-white lg:flex gap-16">
+                <div class="lg:w-[401px] lg:h-[401px] w-[187px] h-[187px] rounded-[100%] border-[18px] lg:border-[25px] border-[#FFFFFF] overflow-hidden mt-[43px] lg:ml-[104px] mx-auto">
+                    <img src="./src/assets/im.jpeg" alt="" class="w-[401px] h-[401px] object-cover">
+                </div>
+                <div class="flex-col mt-[25px] lg:mt-[64px] px-4">
+                    <div class="lg:w-[422px] name">
+                        <h1 class="font-bold text-[38px] lg:text-6xl leading-[136%] text-[#393939]">I'm <span class="font-bold text-[38px] lg:text-6xl leading-[136%] text-[#2157F2] multiple-text"></span></h1>
+                    </div>
+                    <div class="lg:w-[376px] mt-5 mb-[42px] about">
+                        <p class="lg:text-[20px] text-[18px] font-normal leading-[150%] text-[#393939]">Draft is a revolutionary mobile app built to help you manage your business easily and save your money.</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class=" lg:w-[200px] px-2 py-4 lg:p-[15px] btn-one rounded-[20px] bg-[#2157F2] flex gap-3 items-center text-center justify-center">
+                            <p class="text-white text-[15px] font-semibold">See Projects</p>
+                            <img src="./src/assets/next.svg" alt="">
+                        </div>
+                        <div class="flex items-center btn-two text-center">
+                            <p class="font-semibold text-base leading-[150%] text-[#6C92FF] text-center">Download Resume</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex flex flex-wrap gap-4 absolute lg:translate-x-[35%] top-full lg:top-[73%]">
+                <div class="flex-col" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="w-[75px] mx-auto translate-y-7 border-[10px] border-white h-[75px] bg-black rounded-[100%] overflow-hidden text-center">
+                        <img src="./src/assets/laravel1.png" alt="">
+                    </div>
+                    <div class="w-[161px] h-[91px] rounded-3xl bg-[#A6BCFA] shadow-md flex justify-center text-center items-center">
+                        <h1 class="font-semibold text-xl text-[#FFFFFF]">Laravel</h1>
+                    </div>
+                </div>
+                <div class="flex-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="w-[75px] h-[75px] mx-auto translate-y-7 border-[10px] border-white bg-black rounded-[100%] overflow-hidden text-center">
+                        <img src="./src/assets/tailwindcss.png" alt="" class="object-cover">
+                    </div>
+                    <div class="w-[161px] h-[91px] rounded-3xl bg-[#A6BCFA] shadow-md flex justify-center text-center items-center">
+                        <h1 class="font-semibold text-xl text-[#FFFFFF]">Tailwind CSS</h1>
+                    </div>
+                </div>
+                <div class="flex-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                    <div class="w-[70px] h-[70px] mx-auto translate-y-7 border-[10px] border-white rounded-[100%] bg-black overflow-hidden text-center">
+                        <img src="./src/assets/alpinejs1-removebg-preview.png" alt="" class="mt-2">
+                    </div>
+                    <div class="w-[161px] h-[91px] rounded-3xl bg-[#A6BCFA] shadow-md flex justify-center text-center items-center">
+                        <h1 class="font-semibold text-xl text-[#FFFFFF]">Alpine Js</h1>
+                    </div>
+                </div>
+                <div class="flex-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                    <div class="w-[70px] h-[70px] mx-auto translate-y-7 border-[10px] border-white rounded-[100%] bg-black overflow-hidden text-center">
+                        <img src="./src/assets/Livewire-removebg-preview.png" alt="" class="mt-1">
+                    </div>
+                    <div class="w-[161px] h-[91px] rounded-3xl bg-[#A6BCFA] shadow-md flex justify-center text-center items-center">
+                        <h1 class="font-semibold text-xl text-[#FFFFFF]">Livewire</h1>
+                    </div>
+                </div>
+                <div class="flex-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+                    <div class="w-[70px] h-[70px] mx-auto translate-y-7 border-[10px] border-white rounded-[100%] bg-black overflow-hidden text-center">
+                        <img src="./src/assets/net-removebg-preview.png" alt="" class="">
+                    </div>
+                    <div class="w-[161px] h-[91px] rounded-3xl bg-[#A6BCFA] shadow-md flex justify-center text-center items-center">
+                        <h1 class="font-semibold text-xl text-[#FFFFFF]">.NET</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto lg:px-8 px-10 lg:mt-16 mb-[152px] overflow-hidden">
+        <div class="flex flex-wrap lg:hidden gap-4 lg:translate-x-[35%] lg:top-[73%]">
+            <div class="flex-col" data-aos="fade-up" data-aos-duration="1200">
+                <div class="w-[75px] mx-auto translate-y-7 border-[10px] border-white h-[75px] bg-black rounded-[100%] overflow-hidden text-center">
+                    <img src="./src/assets/laravel1.png" alt="">
+                </div>
+                <div class="lg:w-[161px] w-[140px] lg:h-[91px] h-[81px] rounded-3xl bg-[#A6BCFA] shadow-md flex justify-center text-center items-center">
+                    <h1 class="font-semibold text-xl text-[#FFFFFF]">Laravel</h1>
+                </div>
+            </div>
+            <div class="flex-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                <div class="w-[75px] h-[75px] mx-auto translate-y-7 border-[10px] border-white bg-black rounded-[100%] overflow-hidden text-center">
+                    <img src="./src/assets/tailwindcss.png" alt="" class="object-cover">
+                </div>
+                <div class="lg:w-[161px] w-[140px] lg:h-[91px] h-[81px] rounded-3xl bg-[#A6BCFA] shadow-md flex justify-center text-center items-center">
+                    <h1 class="font-semibold text-xl text-[#FFFFFF]">Tailwind CSS</h1>
+                </div>
+            </div>
+            <div class="flex-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                <div class="w-[70px] h-[70px] mx-auto translate-y-7 border-[10px] border-white rounded-[100%] bg-black overflow-hidden text-center">
+                    <img src="./src/assets/alpinejs1-removebg-preview.png" alt="" class="mt-2">
+                </div>
+                <div class="lg:w-[161px] w-[140px] lg:h-[91px] h-[81px] rounded-3xl bg-[#A6BCFA] shadow-md flex justify-center text-center items-center">
+                    <h1 class="font-semibold text-xl text-[#FFFFFF]">Alpine Js</h1>
+                </div>
+            </div>
+            <div class="flex-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                <div class="w-[70px] h-[70px] mx-auto translate-y-7 border-[10px] border-white rounded-[100%] bg-black overflow-hidden text-center">
+                    <img src="./src/assets/Livewire-removebg-preview.png" alt="" class="mt-1">
+                </div>
+                <div class="lg:w-[161px] w-[140px] lg:h-[91px] h-[81px] rounded-3xl bg-[#A6BCFA] shadow-md flex justify-center text-center items-center">
+                    <h1 class="font-semibold text-xl text-[#FFFFFF]">Livewire</h1>
+                </div>
+            </div>
+            <div class="flex-col" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">
+                <div class="w-[70px] h-[70px] mx-auto translate-y-7 border-[10px] border-white rounded-[100%] bg-black overflow-hidden text-center">
+                    <img src="./src/assets/net-removebg-preview.png" alt="" class="">
+                </div>
+                <div class="lg:w-[161px] w-[140px] lg:h-[91px] h-[81px] rounded-3xl bg-[#A6BCFA] shadow-md flex justify-center text-center items-center">
+                    <h1 class="font-semibold text-xl text-[#FFFFFF]">.NET</h1>
+                </div>
+            </div>
+        </div>
+        <div class="flex-col justify-center items-center mt-16 lg:mt-0 text-center mx-auto lg:w-[500px]" id="portofolio">
+            <h1 class="text-cyan-500 text-2xl lg:text-3xl font-semibold">Portfolio</h1>
+            <h2 class="text-slate-700 text-3xl lg:text-4xl font-bold mt-2">Latest Project</h2>
+            <div class="flex justify-center gap-2 mt-2">
+                <div class="w-[19px] h-[19px] rounded-full shadow-lg ellips"></div>
+                <div class="w-[19px] h-[19px] rounded-full shadow-lg ellips"></div>
+                <div class="w-[19px] h-[19px] rounded-full shadow-lg ellips"></div>
+            </div>
+        </div>
+        <div class="container mx-auto mt-14">
+            <div class="lg:columns-3 columns-1 lg:gap-8 lg:px-8 lg:mx-8 relative" id="projects" >
+                <div class="absolute -translate-y-32 -z-10">
+                    <img src="./src/assets/Dots.svg" alt="">
+                </div>
+                <div class="flex-col items-center justify-center bg-white rounded-xl shadow-2xl">
+                    <div class="relative w-[100%] h-[100%] overflow-hidden portfolio-box rounded-xl m-0">
+                        <img src="./src/assets/metrics.png" alt="" class="w-full hover:scale-125 ease-in-out duration-500" id="images">
+                        <div class="portfolio-detail absolute bottom-0 top-0 lg:px-10">
+                            <h2 class="text-[#2157F2] font-[700] lg:text-3xl mt-4">Metrics Loaning Percentage</h2>
+                            <p class="text-white lg:flex leading-6 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorem. Odio iste alias aut incidunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 flex-col items-center justify-center bg-white rounded-lg shadow-xl">
+                    <div class="overflow-hidden relative w-[100%] h-[100%] portfolio-box rounded-xl">
+                        <img src="./src/assets/landingpage.png" alt="" class="w-full hover:scale-125 ease-in-out duration-500">
+                        <div class="absolute portfolio-detail bottom-0 top-0 lg:px-10">
+                            <h2 class="text-[#2157F2] font-[700] lg:text-3xl mt-4">Ntfx Landing Page</h2>
+                            <p class="text-white leading-6 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorem. Odio iste alias aut incidunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 flex-col items-center justify-center bg-white rounded-lg shadow-xl">
+                    <div class="overflow-hidden portfolio-box relative w-[100%] h-[100%] rounded-xl">
+                        <img src="./src/assets/personalMotor.png" alt="" class="w-full hover:scale-125 ease-in-out duration-500">
+                        <div class="absolute portfolio-detail bottom-0 top-0 lg:px-10">
+                            <h2 class="text-[#2157F2] font-[700] lg:text-3xl mt-4">Personal Motor</h2>
+                            <p class="text-white leading-6 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorem. Odio iste alias aut incidunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 flex-col items-center justify-center bg-white rounded-lg shadow-xl">
+                    <div class="overflow-hidden relative portfolio-box w-[100%] h-[100%] rounded-xl">
+                        <img src="./src/assets/rondovision.png" alt="" class="w-full hover:scale-125 ease-in-out duration-500">
+                        <div class="absolute portfolio-detail bottom-0 top-0 lg:px-10">
+                            <h2 class="text-[#2157F2] font-[700] lg:text-3xl mt-4">Rondovision Landing Page</h2>
+                            <p class="text-white leading-6 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorem. Odio iste alias aut incidunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 flex-col items-center justify-center bg-white rounded-lg shadow-xl">
+                    <div class="overflow-hidden relative portfolio-box w-[100%] h-[100%] rounded-xl">
+                        <img src="./src/assets/aspirasi.png" alt="" class="w-full hover:scale-125 ease-in-out duration-500">
+                        <div class="absolute portfolio-detail bottom-0 top-0 lg:px-10">
+                            <h2 class="text-[#2157F2] font-[700] lg:text-3xl mt-4">Aspirasi Kita</h2>
+                            <p class="text-white leading-6 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorem. Odio iste alias aut incidunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 flex-col items-center justify-center bg-white rounded-lg shadow-xl">
+                    <div class="overflow-hidden relative portfolio-box w-[100%] h-[100%] rounded-xl">
+                        <img src="./src/assets/netbookLanding.png" alt="" class="w-full hover:scale-125 ease-in-out duration-500">
+                        <div class="absolute portfolio-detail bottom-0 top-0 lg:px-10">
+                            <h2 class="text-[#2157F2] font-[700] lg:text-3xl mt-4">NetBook Landing Page</h2>
+                            <p class="text-white leading-6 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, dolorem. Odio iste alias aut incidunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -translate-y-52 translate-x-[80px] -z-10">
+                    <img src="./src/assets/pluss.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="overflow-hidden">
+        <div class="container lg:relative mx-auto px-6 lg:px-0 bg-[#A6BCFA]">
+            <div class="flex flex-wrap lg:flex overflow-hidden">
+                <div class="absolute lg:static translate-y-[170%] lg:translate-y-0  -translate-x-8 lg:translate-x-0 lg:z-0">
+                    <img src="./src/assets/peta.svg" alt="">
+                </div>
+                <div id="about" class="lg:absolute mt-12 lg:translate-x-[100%] px-6 py-6 lg:w-[563px] lg:mt-[300px] lg:ml-[116px] lg:mb-[56px] lg:top-0 top-16 lg:h-[491px] lg:rounded-tl-[100px] rounded-tl-[54px] lg:rounded-br-[100px] rounded-br-[54px] bg-profile backdrop-blur-[10px] border border-white">
+                    <div class="flex gap-3 justify-end lg:mt-[8px] lg:mr-[30px]">
+                        <a href=""><img src="./src/assets/wa.svg" alt=""></a>
+                        <a href=""><img src="./src/assets/ins.svg" alt=""></a>
+                        <a href=""><img src="./src/assets/vector.svg" alt=""></a>
+                    </div>
+                    <div class="lg:w-[463px] lg:h-[164px] lg:ml-[35px] mt-2">
+                        <h1 class="font-bold lg:text-6xl text-3xl lg:leading-[136%] text-[#393939] mb-[22px]">I’m Firman <span class="font-bold lg:text-6xl text-3xl leading-[136%] text-[#2157F2]">Abdul</span> Rohman</h1>
+                        <div class="flex gap-4 mb-[5px]">
+                            <div class="w-[18px] h-[18px] rounded-[100%] bg-elips"></div>
+                            <p class="font-[400px] lg:text-[20px] text-[#393939]">I Was Born Taraju, Tasikmalaya</p>
+                        </div>
+                        <div class="flex gap-4 mb-[5px]">
+                            <div class="w-[18px] h-[18px] rounded-[100%] bg-elips"></div>
+                            <p class="font-[400px] lg:text-[20px] text-[#393939]">I'm 20 Years Old</p>
+                        </div>
+                        <div class="flex gap-4 mb-[5px]">
+                            <div class="w-[18px] h-[18px] rounded-[100%] bg-elips"></div>
+                            <p class="font-[400px] lg:text-[20px] text-[#393939]">I have started my interest in this field from 2022</p>
+                        </div>
+                        <div class="flex gap-4 mb-[5px]">
+                            <div class="w-[18px] h-[18px] rounded-[100%] bg-elips"></div>
+                            <p class="font-[400px] lg:text-[20px] text-[#393939]">I’m Assosiate Programer, spesificaly Web Develover </p>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-[18px] h-[18px] rounded-[100%] bg-elips"></div>
+                            <p class="font-[400px] lg:text-[20px] text-[#393939]">My phone number in Indonesia +6280790638949</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="me" class="lg:absolute lg:-translate-x-[10%] bottom-0 lg:rotate translate-x-16">
+                    <img src="./src/assets/firman-removebg.png" alt="" class="lg:w-[900px] lg:h-[900px] w-[700px] h-[500px] z-[9999] lg:z-0">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto">
+        <div class="px-12">
+            <div class="flex-col justify-center text-center mt-16">
+                <h1 class="lg:text-5xl text-3xl mb-4 font-extrabold text-slate-900">Our <span class="lg:text-5xl text-3xl font-extrabold text-cyan-500">Services</span></h1>
+                <div class="flex justify-center gap-2 mt-2">
+                    <div class="lg:w-[19px] lg:h-[19px] w-[14px] h-[14px] rounded-full shadow-lg ellips"></div>
+                    <div class="lg:w-[19px] lg:h-[19px] w-[14px] h-[14px] rounded-full shadow-lg ellips"></div>
+                    <div class="lg:w-[19px] lg:h-[19px] w-[14px] h-[14px] rounded-full shadow-lg ellips"></div>
+                </div>
+            </div>
+            <div class="lg:columns-3 mt-16 mb-24">
+                <div class="shadow-xl relative overflow-hidden web-aplication-box lg:px-8 lg:py-8 px-4 py-4 flex-col justify-center text-center rounded-lg hover:cursor-pointer hover:scale-105 ease-in-out duration-300">
+                    <div class="web-aplication top-0 left-0 absolute w-full h-full -z-10 opacity-75">
+                        <img src="./src/assets/web-aplication.jpg" alt="" class="backdrop-blur-lg w-full h-full">
+                    </div>
+                    <div class=" disabled:text-cyan-700 hover:text-white">
+                        <i class="fa-solid fa-code text-[50px] text-cyan-700 disabled:text-cyan-700"></i>
+                        <div class="mt-8 hover:text-white">
+                            <h1 class="text-3xl font-bold mb-6">Web Aplication</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, inventore.</p>
+                            <div class="bg-cyan-600 text-white px-6 py-3 w-fit mx-auto rounded-full shadow-lg mt-8">
+                                <p>Read More</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-xl relative overflow-hidden web-aplication-box lg:px-8 lg:py-8 px-4 py-4 flex-col mt-8 lg:mt-0 justify-center text-center  rounded-lg hover:cursor-pointer hover:scale-105 ease-in-out duration-300">
+                    <div class="web-aplication top-0 left-0 absolute w-full h-full -z-10 opacity-75">
+                        <img src="./src/assets/web-static.jpg" alt="" class="w-full h-full">
+                    </div>
+                    <div class=" disabled:text-cyan-700 hover:text-white">
+                        <i class="fa-brands fa-codepen text-[50px] text-cyan-700 disabled:text-cyan-700"></i>
+                        <div class="mt-8 hover:text-white">
+                            <h1 class="text-3xl font-bold mb-6">Web Static</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, inventore.</p>
+                            <div class="bg-cyan-600 text-white px-6 py-3 w-fit mx-auto rounded-full shadow-lg mt-8">
+                                <p>Read More</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-xl relative overflow-hidden web-aplication-box lg:px-8 lg:py-8 px-4 py-4 flex-col mt-8 lg:mt-0 justify-center text-center  rounded-lg  hover:cursor-pointer hover:scale-105 ease-in-out duration-300">
+                    <div class="web-aplication top-0 left-0 absolute w-full h-full -z-10 opacity-75">
+                        <img src="./src/assets/mobile.jpg" alt="" class="backdrop-blur-lg">
+                    </div>
+                    <div class=" disabled:text-cyan-700 hover:text-white">
+                        <i class="fa-solid fa-mobile text-[50px] text-cyan-700 disabled:text-cyan-700"></i>
+                        <div class="mt-8 hover:text-white">
+                            <h1 class="text-3xl font-bold mb-6">Mobile Aplication</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, inventore.</p>
+                            <div class="bg-cyan-600 text-white px-6 py-3 w-fit mx-auto rounded-full shadow-lg mt-8">
+                                <p>Read More</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto mb-16">
+        <div class="mt-16 text-center w-full lg:px-16 px-6">
+            <h1 class="lg:text-5xl text-3xl font-extrabold text-slate-900">Contact <span class="text-cyan-500">Me</span></h1>
+            <div class="lg:flex gap-8 shadow-2xl rounded-lg lg:px-12 px-8 py-10 mt-16">
+                <div class="lg:w-[50%]">
+                    <h1 class="lg:text-4xl text-2xl font-bold text-slate-900">Get in touch</h1>
+                    <div class="mt-6">     
+                        <form action="">
+                            <div class="">
+                                <div class="w-full mb-6 lg:columns-2">
+                                    <div>
+                                        <input class="w-full focus:scale-105 border-2 border-transparent focus:border-2 focus:border-cyan-500 duration-200 ease-in-out bg-[#F5F5F5] px-4 py-2 rounded-md focus:outline-none" type="text" placeholder="Email">
+                                    </div>
+                                    <div class="mt-6 lg:mt-0">
+                                        <input class="w-full focus:scale-105 border-2 border-transparent focus:border-2 focus:border-cyan-500 duration-200 ease-in-out bg-[#F5F5F5] px-4 py-2 rounded-md focus:outline-none" type="text" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="w-full">
+                                    <textarea class="w-full focus:scale-105 border-2 border-transparent focus:border-2 focus:border-cyan-500 duration-200 ease-in-out bg-[#F5F5F5] px-4 py-2 rounded-md focus:outline-none" name="" placeholder="message" id="" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="bg-cyan-600 w-fit px-10 py-3 text-white rounded-lg lg:mt-12 mt-6">
+                                <button type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="lg:w-[50%] flex flex-col justify-center items-center pl-4 lg:pl-0 mt-12 lg:mt-0">
+                    <div class="lg:w-[300px] w-full mb-4">
+                        <div class="flex gap-10">
+                            <div class="lg:w-[40%]">
+                                <i class="fa-solid fa-location-dot lg:text-[50px] text-[40px] text-cyan-600"></i>
+                            </div>
+                            <div class="flex-col lg:w-[50%] justify-start text-start">
+                                <h1 class="lg:text-2xl font-semibold text-slate-900">Location</h1>
+                                <h4 class="text-base font-normal text-slate-800">Taraju/Kab.Tasikmalaya</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-[300px] w-full mb-4">
+                        <div class="flex gap-8">
+                            <div class="lg:w-[40%]">
+                                <i class="fa-solid fa-phone lg:text-[50px] text-[40px] text-cyan-600"></i>
+                            </div>
+                            <div class="flex-col lg:w-[50%] justify-start text-start">
+                                <h1 class="text-2xl font-semibold text-slate-900">Phone</h1>
+                                <h4 class="text-base font-normal text-slate-800">+6285 7906 38949</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-[300px] w-full">
+                        <div class="flex gap-8">
+                            <div class="lg:w-[40%]">
+                                <i class="fa-solid fa-envelope lg:text-[50px] text-[40px] text-cyan-600"></i>
+                            </div>
+                            <div class="flex-col lg:w-[50%] justify-start text-start">
+                                <h1 class="text-2xl font-semibold text-slate-900">Email</h1>
+                                <h4 class="text-base font-normal text-slate-800">firmanabdul278@gmail.com</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"><path fill="#a6bcfa" fill-opacity="1" d="M0,128L40,122.7C80,117,160,107,240,128C320,149,400,203,480,186.7C560,171,640,85,720,69.3C800,53,880,107,960,128C1040,149,1120,139,1200,144C1280,149,1360,171,1400,181.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+            <div class="bg-[#A6BCFA] text-center">
+                <div class="pb-14">
+                    <h1 class="font-[700] text-[#FFFFFF] lg:text-[32px] text-xl leading-9">Coded By Firman Abdul Rohman</h1>
+                    <p class="text-[#FFFFFF] font-[400] lg:text-base leading-6">All Right Reversed 2023</p>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <a href="https://api.whatsapp.com/send?phone=6285790638949&text=Hallo%20Bang,%20Saya%20Ingin%20Membuat%20Sebuah%20Website" target="_blank">
+                            <div class="tombolwa">
+                                <img src="./src/assets/whatsapp.svg" alt="Whatsapp">
+                            </div>
+                        </a>
+                        <a href="#ig">
+                            <div>
+                                <img src="./src/assets/ig.svg" alt="Instagram">
+                            </div>
+                        </a>
+                        <a href="#tele">
+                            <div>
+                                <img src="./src/assets/tele.svg" alt="Telegram">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <a href="#home" id="to-top" class="fixed w-14 h-14 bg-cyan-400 rounded-full hidden justify-center items-center z-[9999] bottom-4 right-4 p-4 hover:animate-pulse">
+                <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
+            </a>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        AOS.init();
+        const bg = document.getElementById('bg-blue')
+        let cursor = 0
+        let width = 0
+        window.addEventListener('mousemove' ,event => {
+            cursor = event.clientX
+            width = window.screen.width - (window.screen.width - cursor)
+            bg.style.width = width + "px"
+        })
+
+        window.onscroll = function () {
+            const navbar_fix = document.getElementById('navbar-fix')
+            const header = document.querySelector("#navbar");
+            const fixNav = header.offsetTop;
+            const toTop = document.querySelector("#to-top");
+            const portofolio = document.getElementById('portofolio');
+            const about = document.getElementById('about');
+            const me = document.getElementById('me');
+            const hamburger = document.getElementById('hamburger');
+            const navbar_mobile = document.getElementById('navbar-mobile');
+
+            window.addEventListener('click', function() {
+                hamburger.classList.toggle('hamburger');
+                navbar_mobile.classList.toggle('hidden');
+                navbar_mobile.classList.add('navbar-mobile-slide');
+            })
+
+            window.addEventListener('scroll', function() {
+                const values = window.innerHeight / 7 * 6;
+                
+                const RotateMe = me.getBoundingClientRect().top;
+
+                if(RotateMe < values){
+                    me.classList.add('rotasi-rigth')
+                    about.classList.add('rotasi-left')
+                } else {
+                    me.classList.remove('rotasi-rigth')
+                    about.classList.remove('rotasi-left')
+                }
+            })
+            
+            window.addEventListener('scroll', () => {
+                let value = window.innerHeight;
+
+                const slider = portofolio.getBoundingClientRect().top;
+                if(slider < value){
+                    portofolio.classList.add('slide')
+                } else {
+                    portofolio.classList.remove('slide')
+                }
+            })
+
+    
+            if(window.pageYOffset > fixNav){
+                toTop.classList.remove('hidden');
+                toTop.classList.add('flex');
+                header.classList.add('navbar-fix');
+            } else {
+                toTop.classList.remove('flex');
+                toTop.classList.add('hidden');
+                header.classList.remove('navbar-fix');
+            }
+        }
+
+        var typed = new Typed(".multiple-text", {
+            strings : ["Firman Abdul Rohman", "Web Developer"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            backDelay: 1000,
+            smartBackSpace: true,
+            showCursor: false,
+            autoInsertCss: true,
+            loop: true
+        })
+
+    </script>
+</body>
+</html>
