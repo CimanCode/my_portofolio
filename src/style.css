@@ -203,5 +203,5 @@
 }
 
 .navbar-mobile-slide{
-    @apply translate-x-[0] top-full transition-all duration-700 ease-in-out;
+    @apply translate-x-0 top-full transition-all duration-700 ease-in-out;
 }

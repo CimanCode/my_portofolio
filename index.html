@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js" defer></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/output.css">
     <title>Document</title>
@@ -31,7 +32,7 @@
                             <span class="w-[30px] h-[2px] my-2 bg-slate-900 block transition duration-300 ease-in-out"></span>
                             <span class="w-[30px] h-[2px] my-2 bg-slate-900 origin-bottom-left block transition duration-300 ease-in-out"></span>
                         </button>
-                        <nav class="absolute py-5 bg-white shadow-xl top-full translate-x-[100%] hidden right-5 max-w-[250px] w-full px-4 rounded-md z-[9999]" id="navbar-mobile">
+                        <nav class="absolute py-5 bg-white shadow-xl top-full translate-x-[100%] transition-all duration-200 hidden right-5 max-w-[250px] w-full px-4 rounded-md z-[9999]" id="navbar-mobile">
                             <ul>
                                 <li><a href="#home" class="text-base text-slate-900 py-2 flex hover:text-cyan-600">Home</a></li>
                                 <li><a href="#home" class="text-base text-slate-900 py-2 flex hover:text-cyan-600">Projects</a></li>
@@ -284,51 +285,109 @@
                     <div class="lg:w-[19px] lg:h-[19px] w-[14px] h-[14px] rounded-full shadow-lg ellips"></div>
                 </div>
             </div>
-            <div class="lg:columns-3 mt-16 mb-24">
-                <div class="shadow-xl relative overflow-hidden web-aplication-box lg:px-8 lg:py-8 px-4 py-4 flex-col justify-center text-center rounded-lg hover:cursor-pointer hover:scale-105 ease-in-out duration-300">
-                    <div class="web-aplication top-0 left-0 absolute w-full h-full -z-10 opacity-75">
-                        <img src="./src/assets/web-aplication.jpg" alt="" class="backdrop-blur-lg w-full h-full">
+            <div x-data="{open: false,
+                          show: false,
+                          showOpen: false}">             
+                <div class="lg:columns-3 mt-16 mb-24">
+                    <div class="shadow-xl relative overflow-hidden web-aplication-box lg:px-8 lg:py-8 px-4 py-4 flex-col justify-center text-center rounded-lg hover:cursor-pointer hover:scale-105 ease-in-out duration-300">
+                            <div class="web-aplication top-0 left-0 absolute w-full h-full -z-10 opacity-75">
+                                <img src="./src/assets/web-aplication.jpg" alt="" class="backdrop-blur-lg w-full h-full">
+                            </div>
+                            <div class=" disabled:text-cyan-700 hover:text-white">
+                                <i class="fa-solid fa-code text-[50px] text-cyan-700 disabled:text-cyan-700"></i>
+                                <div class="mt-8 hover:text-white">
+                                    <h1 class="text-3xl font-bold mb-6">Web Aplication</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, inventore.</p>
+                                    <button x-on:click="open = !open" class="bg-cyan-600 text-white px-6 py-3 w-fit mx-auto rounded-full shadow-lg mt-8">
+                                        <p>Read More</p>
+                                    </button>
+                                </div>
+                            </div>
                     </div>
-                    <div class=" disabled:text-cyan-700 hover:text-white">
-                        <i class="fa-solid fa-code text-[50px] text-cyan-700 disabled:text-cyan-700"></i>
-                        <div class="mt-8 hover:text-white">
-                            <h1 class="text-3xl font-bold mb-6">Web Aplication</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, inventore.</p>
-                            <div class="bg-cyan-600 text-white px-6 py-3 w-fit mx-auto rounded-full shadow-lg mt-8">
-                                <p>Read More</p>
+                    <div class="shadow-xl relative overflow-hidden web-aplication-box lg:px-8 lg:py-8 px-4 py-4 flex-col mt-8 lg:mt-0 justify-center text-center  rounded-lg hover:cursor-pointer hover:scale-105 ease-in-out duration-300">
+                        <div class="web-aplication top-0 left-0 absolute w-full h-full -z-10 opacity-75">
+                            <img src="./src/assets/web-static.jpg" alt="" class="w-full h-full">
+                        </div>
+                        <div class=" disabled:text-cyan-700 hover:text-white">
+                            <i class="fa-brands fa-codepen text-[50px] text-cyan-700 disabled:text-cyan-700"></i>
+                            <div class="mt-8 hover:text-white">
+                                <h1 class="text-3xl font-bold mb-6">Web Static</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, inventore.</p>
+                                <button x-on:click="show = !show" class="bg-cyan-600 text-white px-6 py-3 w-fit mx-auto rounded-full shadow-lg mt-8">
+                                    <p>Read More</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shadow-xl relative overflow-hidden web-aplication-box lg:px-8 lg:py-8 px-4 py-4 flex-col mt-8 lg:mt-0 justify-center text-center  rounded-lg  hover:cursor-pointer hover:scale-105 ease-in-out duration-300">
+                        <div class="web-aplication top-0 left-0 absolute w-full h-full -z-10 opacity-75">
+                            <img src="./src/assets/mobile.jpg" alt="" class="backdrop-blur-lg">
+                        </div>
+                        <div class=" disabled:text-cyan-700 hover:text-white">
+                            <i class="fa-solid fa-mobile text-[50px] text-cyan-700 disabled:text-cyan-700"></i>
+                            <div class="mt-8 hover:text-white">
+                                <h1 class="text-3xl font-bold mb-6">Mobile Aplication</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, inventore.</p>
+                                <button x-on:click="showOpen = !showOpen" class="bg-cyan-600 text-white px-6 py-3 w-fit mx-auto rounded-full shadow-lg mt-8">
+                                    <p>Read More</p>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="shadow-xl relative overflow-hidden web-aplication-box lg:px-8 lg:py-8 px-4 py-4 flex-col mt-8 lg:mt-0 justify-center text-center  rounded-lg hover:cursor-pointer hover:scale-105 ease-in-out duration-300">
-                    <div class="web-aplication top-0 left-0 absolute w-full h-full -z-10 opacity-75">
-                        <img src="./src/assets/web-static.jpg" alt="" class="w-full h-full">
-                    </div>
-                    <div class=" disabled:text-cyan-700 hover:text-white">
-                        <i class="fa-brands fa-codepen text-[50px] text-cyan-700 disabled:text-cyan-700"></i>
-                        <div class="mt-8 hover:text-white">
-                            <h1 class="text-3xl font-bold mb-6">Web Static</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, inventore.</p>
-                            <div class="bg-cyan-600 text-white px-6 py-3 w-fit mx-auto rounded-full shadow-lg mt-8">
-                                <p>Read More</p>
+                <div x-show="open" class="">
+                    <div class="px-4 py-2 bg-white shadow-xl rounded-lg inset-x-0 z-20 absolute lg:w-[500px] lg:mx-0 mx-8 lg:translate-x-[450px] lg:-translate-y-[400px] -translate-y-[1200px]">
+                        <div class="flex justify-end">
+                            <div class="hover:bg-red-700 hover:text-white hover:cursor-pointer w-fit" x-on:click="open = false">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg> 
                             </div>
                         </div>
+                        <h1 class="text-3xl font-bold text-slate-900 text-center">Web Aplication</h1>
+                        <div class="overflow-y-scroll lg:overflow-auto h-[150px] lg:h-full">
+                            <p class="text-base font-semibold text-slate-800 mt-4 mx-4 mb-4">Saya membuat aplikasi web menggunakan bahasa pemrograman php dengan
+                               framework Laravel dan database postgresql, selain itu saya juga bisa mengintegrasikan beberapa framework lainnya seperti 
+                               TailwindCSS, Livewire, dan Alpine JS</p>
+                        </div>
                     </div>
+                    <div class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm" x-on:click="open = false"></div>
                 </div>
-                <div class="shadow-xl relative overflow-hidden web-aplication-box lg:px-8 lg:py-8 px-4 py-4 flex-col mt-8 lg:mt-0 justify-center text-center  rounded-lg  hover:cursor-pointer hover:scale-105 ease-in-out duration-300">
-                    <div class="web-aplication top-0 left-0 absolute w-full h-full -z-10 opacity-75">
-                        <img src="./src/assets/mobile.jpg" alt="" class="backdrop-blur-lg">
-                    </div>
-                    <div class=" disabled:text-cyan-700 hover:text-white">
-                        <i class="fa-solid fa-mobile text-[50px] text-cyan-700 disabled:text-cyan-700"></i>
-                        <div class="mt-8 hover:text-white">
-                            <h1 class="text-3xl font-bold mb-6">Mobile Aplication</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, inventore.</p>
-                            <div class="bg-cyan-600 text-white px-6 py-3 w-fit mx-auto rounded-full shadow-lg mt-8">
-                                <p>Read More</p>
+                <div x-show="show">
+                    <div class="px-4 py-2 bg-white shadow-xl rounded-lg inset-x-0 z-20 absolute lg:w-[500px] lg:translate-x-[450px] lg:-translate-y-[400px] mx-8 lg:mx-0 -translate-y-[800px]">
+                        <div class="flex justify-end">
+                            <div class="hover:bg-red-700 hover:text-white hover:cursor-pointer w-fit" x-on:click="show = false">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg> 
                             </div>
                         </div>
+                        <h1 class="text-3xl font-bold text-slate-900 text-center">Web Static</h1>
+                        <div class="overflow-y-scroll lg:overflow-auto h-[150px] lg:h-full">
+                            <p class="text-base font-semibold text-slate-800 mt-4 mx-4 mb-4">Saya membuat aplikasi web menggunakan bahasa pemrograman php dengan
+                               framework Laravel dan database postgresql, selain itu saya juga bisa mengintegrasikan beberapa framework lainnya seperti 
+                               TailwindCSS, Livewire, dan Alpine JS</p>
+                        </div>
                     </div>
+                    <div class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm" x-on:click="show = false"></div>
+                </div>
+                <div x-show="showOpen">
+                    <div class="px-4 py-2 bg-white shadow-xl rounded-lg inset-x-0 z-20 absolute lg:w-[500px] lg:translate-x-[450px] lg:-translate-y-[400px] mx-8 lg:mx-0 -translate-y-[400px]">
+                        <div class="flex justify-end">
+                            <div class="hover:bg-red-700 hover:text-white hover:cursor-pointer w-fit" x-on:click="showOpen = false">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg> 
+                            </div>
+                        </div>
+                        <h1 class="text-3xl font-bold text-slate-900 text-center">Mobile Aplication</h1>
+                        <div class="overflow-x-scroll h-[150px] lg:h-full lg:overflow-auto">
+                            <p class="text-base font-semibold text-slate-800 mt-4 mx-4 mb-4">Saya membuat aplikasi web menggunakan bahasa pemrograman php dengan
+                               framework Laravel dan database postgresql, selain itu saya juga bisa mengintegrasikan beberapa framework lainnya seperti 
+                               TailwindCSS, Livewire, dan Alpine JS</p>
+                        </div>
+                    </div>
+                    <div class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm" x-on:click="showOpen = false"></div>
                 </div>
             </div>
         </div>
