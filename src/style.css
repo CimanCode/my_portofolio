@@ -26,11 +26,11 @@
 }
 
 .rotasi-rigth{
-    @apply lg:translate-x-[60%] lg:duration-1000;
+    @apply lg:translate-x-[60%] translate-x-[25%]  duration-1000;
 }
 
 .rotasi-left {
-    @apply lg:-translate-x-[10%] lg:duration-1000;
+    @apply lg:-translate-x-[10%] -translate-x-0 duration-1000;
 }
  
 @keyframes slider {
